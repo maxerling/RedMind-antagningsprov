@@ -21,7 +21,7 @@ public class MainTest {
         assertEquals("Current amount: " + atm.getBalance() + "\n" +
                 "Thousand bills x 0" + "\n" +
                 "Five hundred bills x 1" + "\n" +
-                "Hunrded bills x 0",result);
+                "Hundred bills x 0",result);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class MainTest {
         assertEquals("Current amount: " + atm2.getBalance() + "\n" +
                 "Thousand bills x 1" + "\n" +
                 "Five hundred bills x 1" + "\n" +
-                "Hunrded bills x 0",result);
+                "Hundred bills x 0",result);
 
 
         result = atm2.withdraw(700);
@@ -55,7 +55,7 @@ public class MainTest {
         assertEquals("Current amount: " + atm2.getBalance() + "\n" +
                 "Thousand bills x 0" + "\n" +
                 "Five hundred bills x 1" + "\n" +
-                "Hunrded bills x 2",result);
+                "Hundred bills x 2",result);
 
 
         result = atm2.withdraw(400);
@@ -63,7 +63,7 @@ public class MainTest {
         assertEquals("Current amount: " + atm2.getBalance() + "\n" +
                 "Thousand bills x 0" + "\n" +
                 "Five hundred bills x 0" + "\n" +
-                "Hunrded bills x 4",result);
+                "Hundred bills x 4",result);
 
 
         result = atm2.withdraw(1100);
@@ -71,7 +71,7 @@ public class MainTest {
         assertEquals("Current amount: " + atm2.getBalance() + "\n" +
                 "Thousand bills x 1" + "\n" +
                 "Five hundred bills x 0" + "\n" +
-                "Hunrded bills x 1",result);
+                "Hundred bills x 1",result);
 
 
         result = atm2.withdraw(1000);
@@ -87,7 +87,7 @@ public class MainTest {
         assertEquals("Current amount: " + atm2.getBalance() + "\n" +
                 "Thousand bills x 0" + "\n" +
                 "Five hundred bills x 0" + "\n" +
-                "Hunrded bills x 3",result);
+                "Hundred bills x 3",result);
 
         assertEquals(0,atm2.getBalance());
         assertNotEquals(100,atm2.getBalance());

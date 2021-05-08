@@ -52,7 +52,7 @@ public class ATM {
             return "Current amount: " + getBalance() + "\n" +
                     "Thousand bills x " + billCounter[0] + "\n" +
                     "Five hundred bills x " + billCounter[1] + "\n" +
-                    "Hunrded bills x " + billCounter[2];
+                    "Hundred bills x " + billCounter[2];
         } else {
             return "Not enough balance, try again!";
         }

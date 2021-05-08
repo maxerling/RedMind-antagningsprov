@@ -33,6 +33,7 @@ public class ATM {
             if (amountOfThousandBillsAmount <= thousandBills && amount >= 1000) {
                 billCounter[0] = amountOfThousandBillsAmount;
                 amount -= 1000 * billCounter[0];
+                this.thousandBills -= billCounter[0];
             }
 
             int amountOfFiveHundredBillsAmount = (int) Math.floor(amount/500);
@@ -40,6 +41,7 @@ public class ATM {
             if (amountOfFiveHundredBillsAmount <= fiveHundredBills && amount >= 500) {
                 billCounter[1] = amountOfFiveHundredBillsAmount;
                 amount -= 500 * billCounter[1];
+                this.fiveHundredBills -= billCounter[1];
             }
 
             int amountOfHundredBillsAmount = (int) Math.floor(amount/100);
@@ -47,16 +49,23 @@ public class ATM {
             if (amountOfHundredBillsAmount <= hundredBills && amount >= 100) {
                 billCounter[2] = amountOfHundredBillsAmount;
                 amount -= 100 * billCounter[2];
+                this.hundredBills -= billCounter[2];
             }
 
-            return "Current amount: " + getBalance() + "\n" +
-                    "Thousand bills x " + billCounter[0] + "\n" +
-                    "Five hundred bills x " + billCounter[1] + "\n" +
-                    "Hundred bills x " + billCounter[2];
-        } else {
+
+        }
+
+        if (amount > 0 || amount < 0) {
             return "Not enough balance, try again!";
         }
+
+        return "Current amount: " + getBalance() + "\n" +
+                "Thousand bills x " + billCounter[0] + "\n" +
+                "Five hundred bills x " + billCounter[1] + "\n" +
+                "Hundred bills x " + billCounter[2];
     }
+
+
 
     public int getBalance() {
         return balance;
@@ -64,5 +73,29 @@ public class ATM {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public int getThousandBills() {
+        return thousandBills;
+    }
+
+    public void setThousandBills(int thousandBills) {
+        this.thousandBills = thousandBills;
+    }
+
+    public int getFiveHundredBills() {
+        return fiveHundredBills;
+    }
+
+    public void setFiveHundredBills(int fiveHundredBills) {
+        this.fiveHundredBills = fiveHundredBills;
+    }
+
+    public int getHundredBills() {
+        return hundredBills;
+    }
+
+    public void setHundredBills(int hundredBills) {
+        this.hundredBills = hundredBills;
     }
 }

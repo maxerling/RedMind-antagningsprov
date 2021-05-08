@@ -36,6 +36,14 @@ public class MainTest {
         assertEquals("Not enough balance, try again!",result);
     }
 
+    @Test
+    public void withdrawLessThanBillTest() {
+
+        String result = atm.withdraw(5);
+
+        assertEquals("Not enough balance, try again!",result);
+    }
+
 
 
     @Test

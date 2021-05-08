@@ -33,7 +33,11 @@ public class Main {
                     }
                     break;
                 case "2":
+                    System.out.println("ATM STATS:");
                     System.out.println(atm.getBalance());
+                    System.out.println("1000-bills: " + atm.getThousandBills());
+                    System.out.println("500-bills: " + atm.getFiveHundredBills());
+                    System.out.println("100-bills: " + atm.getHundredBills());
                     break;
                 case "3":
                     System.out.println("Shutting down...");

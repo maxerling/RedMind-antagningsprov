@@ -27,7 +27,6 @@ public class ATM {
     public String withdraw(int amount) {
         int[] billCounter = new int[3];
         if (amount <= balance && amount > 0) {
-            setBalance(this.balance-amount);
             int amountOfThousandBillsAmount = (int) Math.floor(amount/1000);
 
             if (amountOfThousandBillsAmount <= thousandBills && amount >= 1000) {
@@ -52,7 +51,7 @@ public class ATM {
                 this.hundredBills -= billCounter[2];
             }
 
-
+            setBalance(this.balance-(1000 * billCounter[0] + 500 * billCounter[1] + 100 * billCounter[2]));
         }
 
         if (amount > 0 || amount < 0) {

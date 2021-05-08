@@ -76,7 +76,10 @@ public class MainTest {
 
         result = atm2.withdraw(700);
 
-        assertEquals("Not enough balance, try again!",result);
+        assertEquals("Current amount: 0\n" +
+                "Thousand bills x 0\n" +
+                "Five hundred bills x 1\n" +
+                "Hundred bills x 2",result);
 
         result = atm2.withdraw(300);
 
@@ -87,8 +90,8 @@ public class MainTest {
 
 
         assertEquals(0,atm2.getThousandBills());
-        assertEquals(1,atm2.getFiveHundredBills());
-        assertEquals(2,atm2.getHundredBills());
+        assertEquals(0,atm2.getFiveHundredBills());
+        assertEquals(0,atm2.getHundredBills());
     }
 
 
